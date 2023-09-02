@@ -1,0 +1,130 @@
+[[redirects]]
+  from = "/portfolio/lookbook/"
+  to = "/portfolio/lookbook/lookbook-summer/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/*"
+  to = "/404_not_found/"
+  status = 404
+  force = false
+[[headers]]
+  for = "/wp-json/wp/v2/pages/532"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/author/amankumar/feed/"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/users/2"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/users/1"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/author/admin/feed/"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/categories/68"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/pages/32"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/category/azure-devops/feed/"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/pages/51"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/pages/545"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/posts/371"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/use-azure-pipelines-for-free-with-self-hosted-agent/feed/"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/posts/421"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/static-code-analysis-with-sonarcloud-and-azure-pipelines/feed/"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/pages/467"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/pages/557"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/privacy-policy/feed/"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/pages/3"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/posts/475"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/pages/91"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/managing-open-source-security-and-license-with-whitesource-bolt-and-azure-pipelines/feed/"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/pages/521"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/wp-sitemap-index.xsl"
+  [headers.values]
+    Content-Type = "application/xml; charset=UTF-8"
+[[headers]]
+  for = "/comments/feed/"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=UTF-8"
+[[headers]]
+  for = "/feed/"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/pages/68"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/wp-sitemap.xsl"
+  [headers.values]
+    Content-Type = "application/xml; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/pages/636"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+[[headers]]
+  for = "/wp-json/wp/v2/pages/493"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"

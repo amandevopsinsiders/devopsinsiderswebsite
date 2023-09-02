@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Aman Gupta &#8211; DevOps Insiders</title>
+	<atom:link href="/author/amankumar/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost/devopsinsiders</link>
+	<description>India &#124; USA &#124; UK &#124; Award Winning DevOps Services </description>
+	<lastBuildDate>Mon, 09 Jan 2023 12:29:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2023/01/cropped-My-project-1-32x32.png</url>
+	<title>Aman Gupta &#8211; DevOps Insiders</title>
+	<link>http://localhost/devopsinsiders</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Managing Open-source security and license with WhiteSource Bolt and Azure Pipelines</title>
+		<link>/managing-open-source-security-and-license-with-whitesource-bolt-and-azure-pipelines/</link>
+		
+		<dc:creator><![CDATA[Aman Gupta]]></dc:creator>
+		<pubDate>Mon, 09 Jan 2023 12:21:03 +0000</pubDate>
+				<category><![CDATA[Azure DevOps]]></category>
+		<guid isPermaLink="false">https://devopsinsiders.vehicleaider.com/?p=475</guid>
+
+					<description><![CDATA[WhiteSource Bolt + Azure Pipelines Till now we have seen how to create Pipelines in Azure DevOps and how to Integrate Sonar Scanning in our Build Pipelines. Open Source Libraries can be very handy and can help in achieving the functionality very fast but managing multiple libraries used in our code can be a tedious [...]]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" loading="lazy" width="700" height="260" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-475-1.jpeg" class="wp-image-476"></p>
+<p>WhiteSource Bolt + Azure Pipelines</p>
+<p>Till now we have seen how to create Pipelines in Azure DevOps and how to Integrate Sonar Scanning in our Build Pipelines.</p>
+<p>Open Source Libraries can be very handy and can help in achieving the functionality very fast but managing multiple libraries used in our code can be a tedious task. For this problem, there is a tool named&nbsp;<strong>WhiteSource Bolt</strong>&nbsp;which can be integrated with our&nbsp;<strong>Azure DevOps Pipeline</strong>&nbsp;and it will generate a report of&nbsp;<strong>Open Source Libraries</strong>&nbsp;used, the&nbsp;<strong>Licenses</strong>, and the&nbsp;<strong>vulnerabilities in the libraries</strong>.</p>
+<p><strong>Integrate WhiteSource in Azure Pipelines</strong></p>
+<p>We just need to follow the below small steps and WhiteSource integration will be done:</p>
+<p><strong>1. Install WhiteSource Bolt Plugin from the Marketplace</strong></p>
+<ul>
+<li>
+    Go to Marketplace and search for WhiteSource bolt</li>
+</ul>
+<p><img decoding="async" loading="lazy" width="700" height="284" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-475-2.png" class="wp-image-477"></p>
+<p>Just click on Get It Free to install the Extention to your Azure DevOps Organisation.</p>
+<p><img decoding="async" loading="lazy" width="700" height="362" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-475-3.png" class="wp-image-478"></p>
+<p><strong>2. Setup WhiteSource Bolt Plugin</strong></p>
+<ul>
+<li>
+    For setting up the WhiteSource plugin, Go to WhiteSource Tab under Pipelines in any project. ( This tab will be shown only if WhiteSourceBolt Plugin is installed)</li>
+</ul>
+<p><img decoding="async" loading="lazy" width="700" height="309" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-475-4.png" class="wp-image-479"></p>
+<ul>
+<li>
+    Just fill the required details and click Get Started.</li>
+</ul>
+<p><img decoding="async" loading="lazy" width="700" height="293" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-475-5.png" class="wp-image-480"></p>
+<ul>
+<li>
+    Once you click on Get Started, The below screen will be shown.</li>
+</ul>
+<p><img decoding="async" loading="lazy" width="700" height="283" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-475-6.png" class="wp-image-481"></p>
+<p>That&#8217;s it! WhiteSource has been configured.</p>
+<p><strong>3. Integrating WhiteSource Scanner into Azure Pipelines</strong></p>
+<ul>
+<li>
+    Goto Pipeline Definition, and add a task for WhiteSource Bolt in the YAML file.</li>
+</ul>
+<p><img decoding="async" loading="lazy" width="700" height="320" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-475-7.png" class="wp-image-482"></p>
+<p>I have removed the Sonar Integration from the YAML just for the Demo purpose but it should be present with the WhiteSource Scanner.</p>
+<p><strong>4. Execute the Pipeline and get the Report</strong></p>
+<p>Once the Pipelines execution is completed, WhiteSource Report will be available under Pipelines -&gt; WhiteSource Tab.</p>
+<p><img decoding="async" loading="lazy" width="700" height="321" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-475-8.png" class="wp-image-483"></p>
+<p>This report will show all the Vulnerabilities present in the OpenSource Libraries used in the Project.</p>
+<p>Also, We can export this report in various formats like HTML, pdf, JSON and excel.</p>
+<p><img decoding="async" loading="lazy" width="700" height="260" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-475-9.png" class="wp-image-484"></p>
+<p><strong>Voila!! Our WhiteSource Integration in Azure Pipelines has been done.</strong></p>
+<p>Thanks for reading this blog. If you like this blog then please leave a comment and a Clap as it motivates me to write more.</p>
+<p>If you have any queries, please write to me at 27aadesh@gmail.com, I will be happy to answer your questions.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Static Code Analysis with SonarCloud and Azure Pipelines.</title>
+		<link>/static-code-analysis-with-sonarcloud-and-azure-pipelines/</link>
+					<comments>/static-code-analysis-with-sonarcloud-and-azure-pipelines/#respond</comments>
+		
+		<dc:creator><![CDATA[Aman Gupta]]></dc:creator>
+		<pubDate>Mon, 09 Jan 2023 11:42:56 +0000</pubDate>
+				<category><![CDATA[Azure DevOps]]></category>
+		<guid isPermaLink="false">https://devopsinsiders.vehicleaider.com/?p=421</guid>
+
+					<description><![CDATA[After setting up a CI Pipeline in the last blog, we are back with a new Blog. In the blog, I will tell you how you scan your code using SonarCloud for Free! Please read the previous blog for setting up a CI pipeline using Azure Pipelines:&#160; For this tutorial, we will use the following [...]]]></description>
+										<content:encoded><![CDATA[
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="700" height="300" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-1.jpeg" alt="" class="wp-image-422"/></figure>
+
+
+
+<p>After setting up a CI Pipeline in the last blog, we are back with a new Blog. In the blog, I will tell you how you scan your code using SonarCloud for Free!</p>
+
+
+
+<p>Please read the previous blog for setting up a CI pipeline using Azure Pipelines:&nbsp;</p>
+
+
+
+<p>For this tutorial, we will use the following Git Repositories and setup CICD for a Quiz App made in React JS.</p>
+
+
+
+<p><strong>Link:</strong>&nbsp;<a href="https://github.com/27aadesh/QuizApp.git" target="_blank" rel="noopener">https://github.com/27aadesh/QuizApp.git</a></p>
+
+
+
+<p>So, Let’s begin.</p>
+
+
+
+<h1 class="wp-block-heading"><strong><strong>Static Code Analysis</strong></strong></h1>
+
+
+
+<p>Static program analysis is the analysis of computer software that is performed without actually executing programs, in contrast with dynamic analysis, which is the analysis performed on programs while they are executing.</p>
+
+
+
+<h1 class="wp-block-heading">SonarCloud</h1>
+
+
+
+<p>Sonarcloud is a Cloud version of SonarQube with all the features and the main thing is that “It’s Free for public projects”.</p>
+
+
+
+<p>When we use Sonarcloud, We are free from managing the Sonarqube machine, Database, and version upgrades. Everything is done automatically and we can use it as a Software as a Service.</p>
+
+
+
+<p>Also, We get a cool badge which we can show in our README.MD file.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="513" height="278" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-2.png" alt="" class="wp-image-423"/></figure>
+
+
+
+<h1 class="wp-block-heading">SonarCloud and Azure Pipelines</h1>
+
+
+
+<p>We need to follow the below steps to scan our code with sonarcloud.io and Azure Pipelines.</p>
+
+
+
+<h2 class="wp-block-heading">1. Installing Sonarcloud Extension in Azure DevOps</h2>
+
+
+
+<p>We need to go to the Azure DevOps marketplace and install the sonar cloud extension.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="700" height="349" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-3.png" alt="" class="wp-image-424"/></figure>
+
+
+
+<p>In the marketplace, search for sonar cloud extension and click on “Get it Free”</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="700" height="331" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-4.png" alt="" class="wp-image-425"/></figure>
+
+
+
+<p>If you are the owner of the organization, then the extension will be installed but if you are not the owner of the organization then you will need the approval from the organization owner.</p>
+
+
+
+<h2 class="wp-block-heading">2. Setting up a new project in Sonarcloud.io</h2>
+
+
+
+<p>Go to&nbsp;<a href="https://sonarcloud.io/" target="_blank" rel="noopener">https://sonarcloud.io</a>&nbsp;and create an account. Once the account is created, click the “New Project” or “+” button on the Top Right Corner.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="700" height="105" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-5.png" alt="" class="wp-image-426"/></figure>
+
+
+
+<p>Setup the new project by filling the required details.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="636" height="530" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-6.png" alt="" class="wp-image-427" srcset="/wp-content/uploads/2023/01/word-image-421-6.png 636w, /wp-content/uploads/2023/01/word-image-421-6-480x400.png 480w" sizes="(max-width: 636px) 100vw, 636px" /></figure>
+
+
+
+<h2 class="wp-block-heading">3. Generate a new Token in SonarCloud</h2>
+
+
+
+<p>Go to my account -&gt; Security Tab</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="550" height="267" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-7.png" alt="" class="wp-image-428"/></figure>
+
+
+
+<p>You will see the previously generated tokens and the option to generate a new token on this page.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="659" height="453" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-8.png" alt="" class="wp-image-429" srcset="/wp-content/uploads/2023/01/word-image-421-8.png 659w, /wp-content/uploads/2023/01/word-image-421-8-582x400.png 582w" sizes="(max-width: 659px) 100vw, 659px" /></figure>
+
+
+
+<p>Just give any name to the new token and click on generate. A new token will be generated.</p>
+
+
+
+<p><em>Note: Make sure you copy the token as soon it is generated as you won’t be able to see it again!</em></p>
+
+
+
+<p>Once the token is generated, We need to add a sonar cloud service Connection in Azure DevOps.</p>
+
+
+
+<h2 class="wp-block-heading">4. Adding SonarCloud Service Connection in Azure DevOps</h2>
+
+
+
+<p>Go to project settings -&gt; Service Connections.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="700" height="322" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-9.png" alt="" class="wp-image-430"/></figure>
+
+
+
+<p>In the service connections tab, Click on new Service Connection.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="700" height="320" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-10.png" alt="" class="wp-image-431"/></figure>
+
+
+
+<p>Search for SonarCloud and click on Next.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="483" height="206" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-11.png" alt="" class="wp-image-432"/></figure>
+
+
+
+<p>Paste the sonar cloud token and verify the connection.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="483" height="594" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-12.png" alt="" class="wp-image-433" srcset="/wp-content/uploads/2023/01/word-image-421-12.png 483w, /wp-content/uploads/2023/01/word-image-421-12-325x400.png 325w" sizes="(max-width: 483px) 100vw, 483px" /></figure>
+
+
+
+<p>Once saved, You will see the service connection in the list.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="498" height="215" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-13.png" alt="" class="wp-image-434"/></figure>
+
+
+
+<h2 class="wp-block-heading">5. Adding Sonarcloud Scanner in Azure pipeline</h2>
+
+
+
+<p>Since we have installed the sonar cloud extension, Sonarcloud steps are searchable in the tasks.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="700" height="360" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-14.png" alt="" class="wp-image-435"/></figure>
+
+
+
+<p>We will just add the Prepare analysis Configuration task before the build and Run Code analysis task after the build and then we will publish the Quality gate result.</p>
+
+
+
+<p><strong>Prepare Analysis Configuration:</strong></p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="366" height="439" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-15.png" alt="" class="wp-image-436" srcset="/wp-content/uploads/2023/01/word-image-421-15.png 366w, /wp-content/uploads/2023/01/word-image-421-15-333x400.png 333w" sizes="(max-width: 366px) 100vw, 366px" /></figure>
+
+
+
+<p>Use the same SonarCloud Service Endpoint which was added in the Service Connections.</p>
+
+
+
+<p>Give the organization name of the SonarCloud account.</p>
+
+
+
+<p>We are scanning for the ReactJS app that why we are using the standalone scanner.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="358" height="500" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-16.png" alt="" class="wp-image-437" srcset="/wp-content/uploads/2023/01/word-image-421-16.png 358w, /wp-content/uploads/2023/01/word-image-421-16-286x400.png 286w" sizes="(max-width: 358px) 100vw, 358px" /></figure>
+
+
+
+<p>We can provide the configuration in the sonar-project.properties file but here we are providing the manual configuration.</p>
+
+
+
+<p>Give the project key which was created in SonarCloud.</p>
+
+
+
+<p>We can use the BuildNumber variable of Azure Pipelines to version our SonarCloud analysis.</p>
+
+
+
+<p>In the Run Code Analysis and Publish Quality Gate results, We don&#8217;t need to do any configuration so just add the tasks in the YAML.</p>
+
+
+
+<p>Our final YAML will look like this.</p>
+
+
+
+<p># Node.js with React <br># Build a Node.js project that uses React. <br># Add steps that analyze code, save build artifacts, deploy, and more: <br># https://docs.microsoft.com/azure/devops/pipelines/languages/javascript</p>
+
+
+
+<p>trigger: <br>&#8211; master</p>
+
+
+
+<p>pool: <br>default</p>
+
+
+
+<p>steps: <br>&#8211; task: NodeTool@0 <br>inputs: <br>versionSpec: &#8217;10.x&#8217; <br>displayName: &#8216;Install Node.js&#8217;</p>
+
+
+
+<p>&#8211; task: PowerShell@2 <br>inputs: <br>targetType: &#8216;inline&#8217; <br>script: &#8216;npm install&#8217;</p>
+
+
+
+<p>&#8211; task: SonarCloudPrepare@1 <br>inputs: <br>SonarCloud: &#8216;SonarCloud&#8217; <br>organization: &#8216;clouddevopstc&#8217; <br>scannerMode: &#8216;CLI&#8217; <br>configMode: &#8216;manual&#8217; <br>cliProjectKey: &#8216;demoquizapp&#8217; <br>cliProjectName: &#8216;Quiz App&#8217; <br>cliSources: &#8216;.&#8217;</p>
+
+
+
+<p>&#8211; task: PowerShell@2 <br>inputs: <br>targetType: &#8216;inline&#8217; <br>script: &#8216;npm run build.azure&#8217;</p>
+
+
+
+<p>&#8211; task: SonarCloudAnalyze@1</p>
+
+
+
+<p>&#8211; task: SonarCloudPublish@1 <br>inputs: <br>pollingTimeoutSec: &#8216;300&#8217; <br>displayName: &#8216;SonarCloud&#8217;</p>
+
+
+
+<p><strong>Once the Pipeline is ready, just click on Save and Run Pipeline.</strong></p>
+
+
+
+<p>The Pipeline steps will run and the analysis will be done on SonarCloud.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="700" height="298" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-17.png" alt="" class="wp-image-438"/></figure>
+
+
+
+<p>Azure Pipeline Log</p>
+
+
+
+<p>We can also find the analysis results in the Extensions Tab in the Pipeline.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="700" height="256" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-18.png" alt="" class="wp-image-439"/></figure>
+
+
+
+<p>If we click on “Detailed SonarCloud Report”, We will be redirected to the SonarCloud project. Here we can see the issues, Vulnerabilities, Security Hotspots, and other details of the code.</p>
+
+
+
+<p>You can view the analysis on&nbsp;<a href="https://sonarcloud.io/dashboard?id=demoquizapp" target="_blank" rel="noopener">https://sonarcloud.io/dashboard?id=demoquizapp</a>.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="700" height="298" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-421-19.png" alt="" class="wp-image-440"/></figure>
+
+
+
+<p>SonarCloud Analysis Page</p>
+
+
+
+<p><strong>Voila!! Our SonarCloud analysis has been done and We can get Project badges and add them to our README.MD file.</strong></p>
+
+
+
+<p>Conclusion: We discussed how to use sonarcloud for the Static Code Analysis of your code for Free! If you have any queries please write to me at 27aadesh@gmail.com, I will be happy to answer your questions.</p>
+
+
+
+
+<a class="wp-block-read-more" href="/static-code-analysis-with-sonarcloud-and-azure-pipelines/" target="_self">Read more<span class="screen-reader-text">: Static Code Analysis with SonarCloud and Azure Pipelines.</span></a>]]></content:encoded>
+					
+					<wfw:commentRss>/static-code-analysis-with-sonarcloud-and-azure-pipelines/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Use Azure Pipelines for Free with Self Hosted Agent!</title>
+		<link>/use-azure-pipelines-for-free-with-self-hosted-agent/</link>
+					<comments>/use-azure-pipelines-for-free-with-self-hosted-agent/#respond</comments>
+		
+		<dc:creator><![CDATA[Aman Gupta]]></dc:creator>
+		<pubDate>Mon, 09 Jan 2023 08:34:29 +0000</pubDate>
+				<category><![CDATA[Azure DevOps]]></category>
+		<guid isPermaLink="false">https://devopsinsiders.vehicleaider.com/?p=371</guid>
+
+					<description><![CDATA[Hey Guys! What’s Up? I was just searching for hosted free CICD tools, I have found some of the tools like Azure Pipelines, Netlify, Github Actions, Circle CI. One of the best is Azure pipelines because in this we can add our agent and use the power of azure pipelines to create our CICD. In [...]]]></description>
+										<content:encoded><![CDATA[
+<p>Hey Guys! What’s Up? </p>
+
+
+
+<p>I was just searching for hosted free CICD tools, I have found some of the tools like Azure Pipelines, Netlify, Github Actions, Circle CI. One of the best is Azure pipelines because in this we can add our agent and use the power of azure pipelines to create our CICD. </p>
+
+
+
+<p>In the following blogs, I will post how to use other CI tools also but for now, let’s see how we can set up a Free Build Pipeline. </p>
+
+
+
+<p>
+  For this tutorial, we will use the following Git Repositories and setup CICD for a Quiz App made in React JS.
+</p>
+
+
+
+<p><strong>Link:</strong>&nbsp;<a href="https://github.com/27aadesh/QuizApp.git" target="_blank" rel="noopener">https://github.com/27aadesh/QuizApp.git</a>
+</p>
+
+
+
+<p><strong>Introduction to Azure Pipelines</strong>
+</p>
+
+
+
+<p>
+  Azure Pipelines is a cloud service that you can use to automatically build and test your code project and make it available to other users. It works with just about any language or project type.
+</p>
+
+
+
+<p>
+  Azure Pipelines combines continuous integration (CI) and continuous delivery (CD) to constantly and consistently test and build your code and ship it to any target.
+</p>
+
+
+
+<p><strong>How we will use it to Create a Build Pipeline for Free!</strong>
+</p>
+
+
+
+<p>
+  For using Azure Pipelines, We need to follow the below steps:
+</p>
+
+
+
+<ol>
+<li><strong>Create an account on Azure DevOps:&nbsp;</strong>Go to h<a href="https://azure.microsoft.com/en-in/services/devops/" target="_blank" rel="noopener">ttps://azure.microsoft.com/en-in/services/devops/</a>&nbsp;and click on “Start Free” and just log in with your Microsoft Account or create a new one to start.
+</li>
+</ol>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="375" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-2.png" alt="" class="wp-image-373" srcset="/wp-content/uploads/2023/01/word-image-371-2.png 1050w, /wp-content/uploads/2023/01/word-image-371-2-800x286.png 800w, /wp-content/uploads/2023/01/word-image-371-2-768x274.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  Azure DevOps
+</p>
+
+
+
+<p>
+  2. Once your account is created, you will see the below screen.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="445" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-3.png" alt="" class="wp-image-374" srcset="/wp-content/uploads/2023/01/word-image-371-3.png 1050w, /wp-content/uploads/2023/01/word-image-371-3-800x339.png 800w, /wp-content/uploads/2023/01/word-image-371-3-768x325.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  The default organization and project will be already there.
+</p>
+
+
+
+<p>
+  3.&nbsp;<strong>Create a New Project:&nbsp;</strong>For creating a new project click on the “New Project” button on the top right corner. The below screen will be displayed.
+</p>
+
+
+
+<p>
+  Just give the project name and select private or public depending on the requirement and click “Create”.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="648" height="560" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-4.png" alt="" class="wp-image-375" srcset="/wp-content/uploads/2023/01/word-image-371-4.png 648w, /wp-content/uploads/2023/01/word-image-371-4-463x400.png 463w" sizes="(max-width: 648px) 100vw, 648px" /></figure>
+
+
+
+<p>
+  Voila! Our new project has been created.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="443" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-5.png" alt="" class="wp-image-376" srcset="/wp-content/uploads/2023/01/word-image-371-5.png 1050w, /wp-content/uploads/2023/01/word-image-371-5-800x338.png 800w, /wp-content/uploads/2023/01/word-image-371-5-768x324.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  Now we need to plan if we will add our agent or use the Azure provided agent with limited Quota but first let’s understand what is an Azure agent.
+</p>
+
+
+
+<p><strong>Azure Pipeline Agents</strong>
+</p>
+
+
+
+<p>
+  We can call agent as any compute engine, It can be a Virtual Machine or a Container. An agent can be Windows VM, Ubuntu VM, MacOs VM, etc…
+</p>
+
+
+
+<p><strong>You can read more about agents at</strong>&nbsp;<a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/agents?view=azure-devops&amp;tabs=browser" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/agents?view=azure-devops&amp;tabs=browser</a>
+</p>
+
+
+
+<p>
+  The importing thing to note is Azure pipelines charges you&nbsp;for the agent usage so if you use a<strong>&nbsp;self-hosted Agent you can use Azure pipelines for free!!</strong>!
+</p>
+
+
+
+<p>
+  If your usage is less than the quota provided by Azure pipelines then you can use the Microsoft hosted agent.
+</p>
+
+
+
+<p>
+  Please see the below quota details:
+</p>
+
+
+
+<ul>
+<li>
+    One Microsoft-hosted job with 1,800 minutes per month for CI/CD and 1 self-hosted job with unlimited minutes per month.
+  </li>
+</ul>
+
+
+
+<p><strong>Setting up your Personal Computer as a Self-Hosted Agent</strong>
+</p>
+
+
+
+<p>
+  We can set up any VM on the internet as a self-hosted Agent. So why not use our personal computer as a self-hosted agent.
+</p>
+
+
+
+<p>
+  For doing that just follow the below steps:
+</p>
+
+
+
+<ol>
+<li>
+  Go to the Organization Settings.
+</li>
+</ol>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="483" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-6.png" alt="" class="wp-image-377" srcset="/wp-content/uploads/2023/01/word-image-371-6.png 1050w, /wp-content/uploads/2023/01/word-image-371-6-800x368.png 800w, /wp-content/uploads/2023/01/word-image-371-6-768x353.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  2. Go to Agent-Pools
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="482" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-7.png" alt="" class="wp-image-378" srcset="/wp-content/uploads/2023/01/word-image-371-7.png 1050w, /wp-content/uploads/2023/01/word-image-371-7-800x367.png 800w, /wp-content/uploads/2023/01/word-image-371-7-768x353.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  We can use the default agent pool or create a new agent pool. We will use the default agent pool.
+</p>
+
+
+
+<p>
+  Click on the default agent pool and click on New Agent.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="517" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-8.png" alt="" class="wp-image-379" srcset="/wp-content/uploads/2023/01/word-image-371-8.png 1050w, /wp-content/uploads/2023/01/word-image-371-8-800x394.png 800w, /wp-content/uploads/2023/01/word-image-371-8-768x378.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  To Setup a new agent, we will need a personal Access Token so for that just go to the Personal Access tokens page.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="524" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-9.png" alt="" class="wp-image-380" srcset="/wp-content/uploads/2023/01/word-image-371-9.png 1050w, /wp-content/uploads/2023/01/word-image-371-9-800x400.png 800w, /wp-content/uploads/2023/01/word-image-371-9-768x383.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  Enter the below details and click on create to create a Personal Access Token.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="485" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-10.png" alt="" class="wp-image-381" srcset="/wp-content/uploads/2023/01/word-image-371-10.png 1050w, /wp-content/uploads/2023/01/word-image-371-10-800x370.png 800w, /wp-content/uploads/2023/01/word-image-371-10-768x355.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  Warning — Make sure you copy the token as soon as it is generated as you will not be able to see it again.
+</p>
+
+
+
+<p>
+  Now Go back to the Agent Pools page and click on New Agent. You will see the below popup.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="478" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-11.png" alt="" class="wp-image-382" srcset="/wp-content/uploads/2023/01/word-image-371-11.png 1050w, /wp-content/uploads/2023/01/word-image-371-11-800x364.png 800w, /wp-content/uploads/2023/01/word-image-371-11-768x350.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  Download the agent and create an agent folder in the PC and extract the zip file in the agent folder.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="453" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-12.png" alt="" class="wp-image-383" srcset="/wp-content/uploads/2023/01/word-image-371-12.png 1050w, /wp-content/uploads/2023/01/word-image-371-12-800x345.png 800w, /wp-content/uploads/2023/01/word-image-371-12-768x331.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  To Configure the agent, Open Powershell with admin access and execute the below command:
+</p>
+
+
+
+<p>
+  PS C:\agent&gt; .\config.cmd
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="503" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-13.png" alt="" class="wp-image-384" srcset="/wp-content/uploads/2023/01/word-image-371-13.png 1050w, /wp-content/uploads/2023/01/word-image-371-13-800x383.png 800w, /wp-content/uploads/2023/01/word-image-371-13-768x368.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p><em>The Server URL will be https://dev.azure.com/&lt;ORGANISATION NAME&gt;</em>
+</p>
+
+
+
+<p><em>Use Authentication type as PAT</em>
+</p>
+
+
+
+<p><em>Enter the Personal Access token when it prompts</em>
+</p>
+
+
+
+<p><em>Since we are using the default pool so directly press enter</em>
+</p>
+
+
+
+<p><em>Give any name for the agent, I am using the default name.</em>
+</p>
+
+
+
+<p>
+  Voila! Your agent is configured. You can see it from the Portal but you will see your agent as offline.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="271" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-14.png" alt="" class="wp-image-385" srcset="/wp-content/uploads/2023/01/word-image-371-14.png 1050w, /wp-content/uploads/2023/01/word-image-371-14-800x206.png 800w, /wp-content/uploads/2023/01/word-image-371-14-768x198.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  To make the agent online again go to PowerShell and execute the below command:
+</p>
+
+
+
+<p>
+  PS C:\agent&gt; .\run.cmd
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="653" height="177" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-15.png" alt="" class="wp-image-386"/></figure>
+
+
+
+<p>
+  This will make the Agent online.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="252" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-16.png" alt="" class="wp-image-387" srcset="/wp-content/uploads/2023/01/word-image-371-16.png 1050w, /wp-content/uploads/2023/01/word-image-371-16-800x192.png 800w, /wp-content/uploads/2023/01/word-image-371-16-768x184.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p><strong>Setting up Build Pipeline (CI) in Azure Pipelines.</strong>
+</p>
+
+
+
+<p>
+  Setting up a build pipeline is very easy in Azure Pipelines. We will set up the build pipelines for a react JS application present in Github Repo.
+</p>
+
+
+
+<p>
+  Go back to the “Demo Project” we created in the starting and click on Pipelines.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="480" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-17.png" alt="" class="wp-image-388" srcset="/wp-content/uploads/2023/01/word-image-371-17.png 1050w, /wp-content/uploads/2023/01/word-image-371-17-800x366.png 800w, /wp-content/uploads/2023/01/word-image-371-17-768x351.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  Click on Create Pipeline and select GitHub as the Source Control Management.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="481" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-18.png" alt="" class="wp-image-389" srcset="/wp-content/uploads/2023/01/word-image-371-18.png 1050w, /wp-content/uploads/2023/01/word-image-371-18-800x366.png 800w, /wp-content/uploads/2023/01/word-image-371-18-768x352.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  After authentication with Github, You will see the list of repositories present in GitHub.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="484" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-19.png" alt="" class="wp-image-390" srcset="/wp-content/uploads/2023/01/word-image-371-19.png 1050w, /wp-content/uploads/2023/01/word-image-371-19-800x369.png 800w, /wp-content/uploads/2023/01/word-image-371-19-768x354.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  Once you select the repository, You will see the page for creating the YAML for build steps.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="485" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-20.png" alt="" class="wp-image-391" srcset="/wp-content/uploads/2023/01/word-image-371-20.png 1050w, /wp-content/uploads/2023/01/word-image-371-20-800x370.png 800w, /wp-content/uploads/2023/01/word-image-371-20-768x355.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>   We will use the below YAML to create the build and publish the build artifacts on the Azure Artifacts so that we can use them in release Pipelines. </p>
+
+
+
+<pre class="wp-block-preformatted">   # Node.js with React   
+   # Build a Node.js project that uses React.   
+   # Add steps that analyze code, save build artifacts, deploy, and more:   
+   # https://docs.microsoft.com/azure/devops/pipelines/languages/javascripttrigger:   
+   - masterpool:   
+     defaultsteps:   
+   - task: NodeTool@0   
+     inputs:   
+       versionSpec: '10.x'   
+     displayName: 'Install Node.js'- task: PowerShell@2   
+     inputs:   
+       targetType: 'inline'   
+       script: 'npm install'- task: PowerShell@2   
+     inputs:   
+       targetType: 'inline'   
+       script: 'npm run build.azure'- task: CopyFiles@2   
+     inputs:   
+       SourceFolder: '$(System.DefaultWorkingDirectory)/build'   
+       Contents: '**'   
+       TargetFolder: '$(Build.ArtifactStagingDirectory)'- task: PublishBuildArtifacts@1   
+     inputs:   
+       PathtoPublish: '$(Build.ArtifactStagingDirectory)'   
+       ArtifactName: 'quizapp'   
+       publishLocation: 'Container' </pre>
+
+
+
+<p>
+  You can edit the YAML as per the requirement of the Language of which you are setting up the CI Pipeline.
+</p>
+
+
+
+<p>
+  Now Just Click on “RUN” to execute the pipeline.
+</p>
+
+
+
+<p>
+  When we run for the first time, It will ask for permission so go ahead and grant the permission.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="486" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-21.png" alt="" class="wp-image-392" srcset="/wp-content/uploads/2023/01/word-image-371-21.png 1050w, /wp-content/uploads/2023/01/word-image-371-21-800x370.png 800w, /wp-content/uploads/2023/01/word-image-371-21-768x355.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  Now the Pipeline will start to run and the steps defined in the YAML will execute.
+</p>
+
+
+
+<p>
+  You can see the complete log of all the steps in the portal itself.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="483" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-22.png" alt="" class="wp-image-393" srcset="/wp-content/uploads/2023/01/word-image-371-22.png 1050w, /wp-content/uploads/2023/01/word-image-371-22-800x368.png 800w, /wp-content/uploads/2023/01/word-image-371-22-768x353.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  As per the configuration of your agent it will take time in the build process. My machine is slow so it takes around 10 mins to build the code and publish the artifacts to azure.
+</p>
+
+
+
+<p>
+  Once the Pipeline is successfully completed you will see that the artifacts are generated.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="483" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-23.png" alt="" class="wp-image-394" srcset="/wp-content/uploads/2023/01/word-image-371-23.png 1050w, /wp-content/uploads/2023/01/word-image-371-23-800x368.png 800w, /wp-content/uploads/2023/01/word-image-371-23-768x353.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  and the artifacts contain the static files which need to be deployed on a web server.
+</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="1050" height="483" src="https://devopsinsiders.vehicleaider.com/wp-content/uploads/2023/01/word-image-371-24.png" alt="" class="wp-image-395" srcset="/wp-content/uploads/2023/01/word-image-371-24.png 1050w, /wp-content/uploads/2023/01/word-image-371-24-800x368.png 800w, /wp-content/uploads/2023/01/word-image-371-24-768x353.png 768w" sizes="(max-width: 1050px) 100vw, 1050px" /></figure>
+
+
+
+<p>
+  Every time you will commit anything the GitHub repo, This pipeline will be triggered and the build artifacts will be generated.
+</p>
+
+
+
+<p>
+  Voila! We have successfully set up a free build pipeline using Azure Pipelines with a self-hosted agent.
+</p>
+
+
+
+<p class="has-text-align-left">
+  Conclusion: We discussed how to use azure pipelines to setup your build pipeline for free. If you have any queries please write to me at 27aadesh@gmail.com, I will be happy to answer your questions.
+</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/use-azure-pipelines-for-free-with-self-hosted-agent/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
